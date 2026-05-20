@@ -17,3 +17,7 @@ My first project in TripleTen's AI-Assisted Software Engineering program. It inc
 - JavaScript
 - Git and GitHub
 - BEM methodology
+
+## Deployed Site
+
+Check out [this site](https://heyolyastone.github.io/ai-se_project_flashcards/) on GitHub Pages.
