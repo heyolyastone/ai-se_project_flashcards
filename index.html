@@ -26,6 +26,8 @@
 
     <link rel="stylesheet" href="./assets/vendor/normalize.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/mobile-bar.css" />
+
     <script type="module" src="./assets/js/index.js"></script>
   </head>
 
@@ -57,9 +59,12 @@
           <template id="deck-template">
             <li class="deck deck_color_green">
               <a class="deck__link" href="#"></a>
+
               <h3 class="deck__title"></h3>
+
               <div class="deck__row">
                 <p class="deck__count"></p>
+
                 <button
                   class="deck__delete-btn"
                   type="button"
@@ -69,7 +74,9 @@
             </li>
           </template>
 
-          <button class="decks__new-deck-btn" type="button">+ New Deck</button>
+          <button class="decks__new-deck-btn" type="button">
+            + New Deck
+          </button>
         </div>
       </section>
 
@@ -92,18 +99,20 @@
             type="button"
             aria-label="Next card"
           ></button>
-        </div>
 
-        <button
-          class="carousel__btn carousel__btn_type_flip"
-          type="button"
-          aria-label="Flip card"
-        ></button>
+          <button
+            class="carousel__btn carousel__btn_type_flip"
+            type="button"
+            aria-label="Flip card"
+          ></button>
+        </div>
       </section>
 
       <section class="not-found" id="not-found">
         <h2 class="not-found__title">404</h2>
+
         <p class="not-found__text">Page not found</p>
+
         <a href="#home" class="not-found__link">Go back home</a>
       </section>
     </main>

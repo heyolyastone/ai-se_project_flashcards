@@ -1,0 +1,134 @@
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 0 16px;
+  }
+
+  .header {
+    padding-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  .decks {
+    margin-bottom: 160px;
+  }
+
+  .decks__list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .deck {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.55 / 1;
+    box-sizing: border-box;
+  }
+
+  .decks__new-deck-btn {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 72px;
+    width: auto;
+    max-width: none;
+    height: 56px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    z-index: 20;
+  }
+
+  .page::after {
+    content: "";
+    display: block;
+    height: 200px;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 120px;
+    z-index: 10;
+
+    background: linear-gradient(
+      to top,
+      #ececec 0%,
+      #ececec 45%,
+      rgba(236, 236, 236, 0) 100%
+    );
+  }
+
+  .footer__text {
+    position: absolute;
+    left: 16px;
+    bottom: 24px;
+  }
+
+  .carousel {
+    margin-bottom: 0;
+  }
+
+  .carousel__content {
+    display: grid;
+    grid-template-areas:
+      "card card card"
+      "left flip right";
+    grid-template-columns: 56px 56px 56px;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .carousel__card {
+    grid-area: card;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel__btn {
+    position: static;
+    z-index: 5;
+  }
+
+  .carousel__btn_type_left {
+    grid-area: left;
+  }
+
+  .carousel__btn_type_right {
+    grid-area: right;
+  }
+
+  .carousel__btn_type_flip {
+    grid-area: flip;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+  }
+
+  .page__main-content_type_carousel {
+    margin-bottom: 0;
+  }
+
+  .page:has(.page__main-content_type_carousel)::after {
+    display: none;
+  }
+
+  .page__main-content_type_carousel + .footer {
+    position: static;
+    background: none;
+    height: auto;
+  }
+    .deck,
+  .carousel__card,
+  .carousel__btn {
+    box-shadow:
+      0px 2px 8px 0px #0000001a,
+      -1px 2px 2px 0px #ffffffb2 inset,
+      1px -1px 2px 0px #00000040 inset;
+  }
+}
