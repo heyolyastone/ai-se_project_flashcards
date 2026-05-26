@@ -21,3 +21,7 @@ My first project in TripleTen's AI-Assisted Software Engineering program. It inc
 ## Deployed Site
 
 Check out [this site](https://heyolyastone.github.io/ai-se_project_flashcards/) on GitHub Pages.
+
+## Project Pitch Video
+
+Check out [this video](https://www.loom.com/share/f9b402ecff7b45e2aed2c55c1c5825ac), where I describe my project and some challenges I faced while building it.
