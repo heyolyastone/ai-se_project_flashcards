@@ -391,7 +391,38 @@
   letter-spacing: -0.16px;
   color: #00000080;
 }
+.carousel__grid {
+  display: grid;
+  grid-template-areas:
+    "left card right"
+    ". flip .";
+  grid-template-columns: 56px auto 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
 
+.carousel__card {
+  grid-area: card;
+}
+
+.carousel__btn {
+  position: static;
+}
+
+.carousel__btn_type_left {
+  grid-area: left;
+}
+
+.carousel__btn_type_right {
+  grid-area: right;
+}
+
+.carousel__btn_type_flip {
+  grid-area: flip;
+  justify-self: center;
+  margin-top: 0;
+}
 .deck,
 .deck-view__item,
 .carousel__card,
