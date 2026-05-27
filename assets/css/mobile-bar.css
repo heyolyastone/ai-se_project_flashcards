@@ -108,14 +108,14 @@
   }
 
   .carousel__grid {
-    display: grid;
-    grid-template-areas:
-      "card card card"
-      "left flip right";
-    grid-template-columns: 56px 1fr 56px;
-    justify-content: center;
-    gap: 16px;
-  }
+  display: grid;
+  grid-template-areas:
+    "card card card"
+    "left flip right";
+  grid-template-columns: 56px 1fr 56px;
+  justify-content: center;
+  gap: 16px;
+}
 
   .carousel__card {
     grid-area: card;
