@@ -70,16 +70,49 @@
     bottom: 24px;
   }
 
+  .deck-view {
+    margin-bottom: 160px;
+  }
+
+  .deck-view__title {
+    font-size: 40px;
+  }
+
+  .deck-view__list {
+    gap: 16px;
+  }
+
+  .deck-view__buttons {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 72px;
+    z-index: 20;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .deck-view__new-card-btn,
+  .deck-view__practice-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    padding: 0;
+  }
+
   .carousel {
     margin-bottom: 0;
   }
 
-  .carousel__content {
+  .carousel__grid {
     display: grid;
     grid-template-areas:
       "card card card"
       "left flip right";
-    grid-template-columns: 56px 56px 56px;
+    grid-template-columns: 56px 1fr 56px;
     justify-content: center;
     gap: 16px;
   }
@@ -122,13 +155,5 @@
     position: static;
     background: none;
     height: auto;
-  }
-    .deck,
-  .carousel__card,
-  .carousel__btn {
-    box-shadow:
-      0px 2px 8px 0px #0000001a,
-      -1px 2px 2px 0px #ffffffb2 inset,
-      1px -1px 2px 0px #00000040 inset;
   }
 }
