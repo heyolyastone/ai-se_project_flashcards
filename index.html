@@ -42,6 +42,7 @@
           <li>
             <a href="#home" class="nav__link">My Decks</a>
           </li>
+
           <li>
             <a href="#home" class="nav__link">Study</a>
           </li>
@@ -122,6 +123,109 @@
         </div>
       </section>
 
+      <section class="new-deck-view" id="new-deck-view">
+        <h2 class="new-deck-view__title">New Deck</h2>
+
+        <form class="new-deck-view__form" id="new-deck-form">
+          <fieldset class="new-deck-view__color-picker">
+            <legend class="new-deck-view__legend">Pick a color</legend>
+
+            <input
+              class="new-deck-view__color-input"
+              type="radio"
+              id="green"
+              name="deck-color"
+              value="#64d583"
+              aria-label="Green"
+              checked
+            />
+            <label
+              class="new-deck-view__color-label new-deck-view__color-label_color_green"
+              for="green"
+            ></label>
+
+            <input
+              class="new-deck-view__color-input"
+              type="radio"
+              id="blue"
+              name="deck-color"
+              value="#91a8f9"
+              aria-label="Blue"
+            />
+            <label
+              class="new-deck-view__color-label new-deck-view__color-label_color_blue"
+              for="blue"
+            ></label>
+
+            <input
+              class="new-deck-view__color-input"
+              type="radio"
+              id="orange"
+              name="deck-color"
+              value="#ee955e"
+              aria-label="Orange"
+            />
+            <label
+              class="new-deck-view__color-label new-deck-view__color-label_color_orange"
+              for="orange"
+            ></label>
+
+            <input
+              class="new-deck-view__color-input"
+              type="radio"
+              id="pink"
+              name="deck-color"
+              value="#ee92d7"
+              aria-label="Pink"
+            />
+            <label
+              class="new-deck-view__color-label new-deck-view__color-label_color_pink"
+              for="pink"
+            ></label>
+
+            <input
+              class="new-deck-view__color-input"
+              type="radio"
+              id="purple"
+              name="deck-color"
+              value="#aa8ef0"
+              aria-label="Purple"
+            />
+            <label
+              class="new-deck-view__color-label new-deck-view__color-label_color_purple"
+              for="purple"
+            ></label>
+
+            <input
+              class="new-deck-view__color-input"
+              type="radio"
+              id="yellow"
+              name="deck-color"
+              value="#f5d770"
+              aria-label="Yellow"
+            />
+            <label
+              class="new-deck-view__color-label new-deck-view__color-label_color_yellow"
+              for="yellow"
+            ></label>
+          </fieldset>
+
+          <label class="new-deck-view__textarea-label" for="cards-json">
+            Cards
+
+            <textarea
+              class="new-deck-view__textarea"
+              id="cards-json"
+              name="cards"
+            ></textarea>
+          </label>
+
+          <button class="new-deck-view__submit-btn" type="submit" disabled>
+            Create Deck
+          </button>
+        </form>
+      </section>
+
       <section class="not-found" id="not-found">
         <h2 class="not-found__title">404</h2>
 
@@ -130,6 +234,26 @@
         <a href="#home" class="not-found__link">Go back home</a>
       </section>
     </main>
+
+    <div
+      class="modal"
+      id="error-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="error-modal-title"
+    >
+      <div class="modal__container">
+        <h2 class="modal__title" id="error-modal-title">
+          Something went wrong
+        </h2>
+
+        <p class="modal__error"></p>
+
+        <button class="modal__close" type="button">
+          Dismiss
+        </button>
+      </div>
+    </div>
 
     <footer class="footer">
       <p class="footer__text">&copy; 2026 Flash Cards</p>
