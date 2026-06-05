@@ -39,12 +39,12 @@
 
       <nav class="nav">
         <ul class="nav__links">
-          <li>
+          <li class="nav__item">
             <a href="#home" class="nav__link">My Decks</a>
           </li>
 
-          <li>
-            <a href="#home" class="nav__link">Study</a>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
           </li>
         </ul>
       </nav>
@@ -134,7 +134,7 @@
               class="new-deck-view__color-input"
               type="radio"
               id="green"
-              name="deck-color"
+              name="color"
               value="#64d583"
               aria-label="Green"
               checked
@@ -148,7 +148,7 @@
               class="new-deck-view__color-input"
               type="radio"
               id="blue"
-              name="deck-color"
+              name="color"
               value="#91a8f9"
               aria-label="Blue"
             />
@@ -161,7 +161,7 @@
               class="new-deck-view__color-input"
               type="radio"
               id="orange"
-              name="deck-color"
+              name="color"
               value="#ee955e"
               aria-label="Orange"
             />
@@ -174,7 +174,7 @@
               class="new-deck-view__color-input"
               type="radio"
               id="pink"
-              name="deck-color"
+              name="color"
               value="#ee92d7"
               aria-label="Pink"
             />
@@ -187,7 +187,7 @@
               class="new-deck-view__color-input"
               type="radio"
               id="purple"
-              name="deck-color"
+              name="color"
               value="#aa8ef0"
               aria-label="Purple"
             />
@@ -200,7 +200,7 @@
               class="new-deck-view__color-input"
               type="radio"
               id="yellow"
-              name="deck-color"
+              name="color"
               value="#f5d770"
               aria-label="Yellow"
             />
@@ -224,6 +224,30 @@
             Create Deck
           </button>
         </form>
+      </section>
+
+      <section class="about" id="about">
+        <h2 class="about__title">About Flash Cards</h2>
+
+        <p class="about__text">
+          Flash Cards is a study application for creating decks and practicing
+          questions and answers.
+        </p>
+
+        <p class="about__text">
+          Decks are stored in a remote database through an API, so changes
+          remain available after the page is refreshed.
+        </p>
+
+        <pre class="about__code"><code>{
+  "name": "Example Deck",
+  "cards": [
+    {
+      "question": "Example question",
+      "answer": "Example answer"
+    }
+  ]
+}</code></pre>
       </section>
 
       <section class="not-found" id="not-found">

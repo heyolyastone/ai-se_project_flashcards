@@ -663,3 +663,58 @@
 .modal__close:hover {
   opacity: 0.8;
 }
+.about {
+  display: none;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.about_visible {
+  display: block;
+}
+
+.about__title {
+  margin: 0 0 32px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.about__text {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about__code {
+  margin: 32px 0 0;
+  padding: 24px;
+  overflow-x: auto;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 32px 16px;
+  }
+
+  .about__title {
+    font-size: 36px;
+  }
+
+  .about__text {
+    font-size: 16px;
+  }
+
+  .about__code {
+    padding: 16px;
+    font-size: 13px;
+  }
+}

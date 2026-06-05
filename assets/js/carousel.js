@@ -12,6 +12,12 @@ let currentIndex = 0;
 let currentDeck = null;
 let showingQuestion = true;
 
+/**
+ * Updates the carousel title, card text, card color, and navigation buttons
+ * based on the current card and display state.
+ *
+ * @returns {void}
+ */
 function updateDisplay() {
   const currentCard = currentDeck.cards[currentIndex];
 
@@ -28,7 +34,8 @@ function updateDisplay() {
   }
 
   leftButton.disabled = currentIndex === 0;
-  rightButton.disabled = currentIndex === currentDeck.cards.length - 1;
+  rightButton.disabled =
+    currentIndex === currentDeck.cards.length - 1;
 }
 
 leftButton.addEventListener("click", () => {
@@ -52,6 +59,16 @@ flipButton.addEventListener("click", () => {
   updateDisplay();
 });
 
+/**
+ * Displays the carousel view for the selected deck and resets it
+ * to the first card's question.
+ *
+ * @param {object} deck - The deck to display in the carousel.
+ * @param {string} deck.name - The name of the deck.
+ * @param {string} deck.color - The hexadecimal color of the deck.
+ * @param {Array<object>} deck.cards - The cards contained in the deck.
+ * @returns {void}
+ */
 function renderCarouselView(deck) {
   carouselSection.classList.add("carousel_visible");
 

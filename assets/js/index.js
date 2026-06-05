@@ -29,47 +29,39 @@ const deckTemplate = document.querySelector(
 ).content;
 
 const decksSection = document.querySelector("#home");
-
-const deckViewSection = document.querySelector(
-  "#deck-view"
-);
-
-const carouselSection = document.querySelector(
-  "#carousel1"
-);
+const deckViewSection = document.querySelector("#deck-view");
+const carouselSection = document.querySelector("#carousel1");
 
 const newDeckViewSection = document.querySelector(
   "#new-deck-view"
 );
 
-const notFoundSection = document.querySelector(
-  "#not-found"
-);
+const aboutSection = document.querySelector("#about");
+const notFoundSection = document.querySelector("#not-found");
 
 const newDeckButton = document.querySelector(
   "#home .decks__new-deck-btn"
 );
 
+/**
+ * Creates a deck element for the home page.
+ *
+ * @param {object} item - The deck data.
+ * @returns {HTMLElement} The completed deck element.
+ */
 function createDeckEl(item) {
   const deckEl = deckTemplate
     .querySelector(".deck")
     .cloneNode(true);
 
-  const deckTitle = deckEl.querySelector(
-    ".deck__title"
-  );
-
-  const deckCount = deckEl.querySelector(
-    ".deck__count"
-  );
+  const deckTitle = deckEl.querySelector(".deck__title");
+  const deckCount = deckEl.querySelector(".deck__count");
 
   const deleteButton = deckEl.querySelector(
     ".deck__delete-btn"
   );
 
-  const deckLink = deckEl.querySelector(
-    ".deck__link"
-  );
+  const deckLink = deckEl.querySelector(".deck__link");
 
   const color = hexToString(item.color);
 
@@ -96,11 +88,22 @@ function createDeckEl(item) {
   return deckEl;
 }
 
+/**
+ * Adds a deck element to the deck list.
+ *
+ * @param {object} item - The deck data.
+ * @returns {void}
+ */
 function renderDeckEl(item) {
   const deckEl = createDeckEl(item);
   deckList.prepend(deckEl);
 }
 
+/**
+ * Hides every application view.
+ *
+ * @returns {void}
+ */
 function hideAllViews() {
   decksSection.classList.add("decks_hidden");
 
@@ -116,6 +119,8 @@ function hideAllViews() {
     "new-deck-view_visible"
   );
 
+  aboutSection.classList.remove("about_visible");
+
   notFoundSection.classList.remove(
     "not-found_visible"
   );
@@ -125,16 +130,33 @@ function hideAllViews() {
   );
 }
 
+/**
+ * Displays the home view.
+ *
+ * @returns {void}
+ */
 function renderHomeView() {
   hideAllViews();
   decksSection.classList.remove("decks_hidden");
 }
 
+/**
+ * Displays an individual deck.
+ *
+ * @param {object} deck - The deck to display.
+ * @returns {void}
+ */
 function renderOpenDeckRoute(deck) {
   hideAllViews();
   renderDeckView(deck);
 }
 
+/**
+ * Displays the carousel for a deck.
+ *
+ * @param {object} deck - The deck to practice.
+ * @returns {void}
+ */
 function renderCarouselRoute(deck) {
   hideAllViews();
 
@@ -145,6 +167,11 @@ function renderCarouselRoute(deck) {
   renderCarouselView(deck);
 }
 
+/**
+ * Displays the new deck form.
+ *
+ * @returns {void}
+ */
 function renderNewDeckView() {
   hideAllViews();
 
@@ -155,6 +182,21 @@ function renderNewDeckView() {
   disableSubmitBtn();
 }
 
+/**
+ * Displays the About view.
+ *
+ * @returns {void}
+ */
+function renderAboutView() {
+  hideAllViews();
+  aboutSection.classList.add("about_visible");
+}
+
+/**
+ * Displays the page-not-found view.
+ *
+ * @returns {void}
+ */
 function renderNotFoundView() {
   hideAllViews();
 
@@ -163,6 +205,11 @@ function renderNotFoundView() {
   );
 }
 
+/**
+ * Selects and displays a view based on the URL hash.
+ *
+ * @returns {void}
+ */
 function handleRoute() {
   const hash = window.location.hash.slice(1);
 
@@ -170,6 +217,8 @@ function handleRoute() {
     renderHomeView();
   } else if (hash === "new-deck") {
     renderNewDeckView();
+  } else if (hash === "about") {
+    renderAboutView();
   } else if (hash.startsWith("deck/")) {
     const deckId = hash.split("/")[1];
     const currentDeck = getDeckByID(deckId);
