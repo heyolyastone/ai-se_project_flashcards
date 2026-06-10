@@ -338,17 +338,52 @@
 
 .carousel__btn_type_left {
   grid-area: left;
-  background-image: url("../images/left.svg");
+  position: relative;
+}
+
+.carousel__btn_type_left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  width: 12px;
+  height: 12px;
+  border-left: 3px solid #1a1a1a;
+  border-bottom: 3px solid #1a1a1a;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .carousel__btn_type_right {
   grid-area: right;
-  background-image: url("../images/right.svg");
+  position: relative;
+}
+
+.carousel__btn_type_right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #1a1a1a;
+  border-right: 3px solid #1a1a1a;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .carousel__btn_type_flip {
   grid-area: flip;
-  background-image: url("../images/flip.svg");
+  position: relative;
+}
+
+.carousel__btn_type_flip::before {
+  content: "â†»";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #1a1a1a;
+  font-size: 30px;
+  line-height: 1;
+  transform: translate(-50%, -52%);
 }
 
 .not-found {
