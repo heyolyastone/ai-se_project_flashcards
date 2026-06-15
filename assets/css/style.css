@@ -376,7 +376,7 @@
 }
 
 .carousel__btn_type_flip::before {
-  content: "â†»";
+  content: "Ã¢â€ Â»";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -752,4 +752,55 @@
     padding: 16px;
     font-size: 13px;
   }
+}
+.carousel__btn {
+  position: relative;
+}
+
+.carousel__btn_type_left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  width: 12px;
+  height: 12px;
+  border-left: 3px solid #1a1a1a;
+  border-bottom: 3px solid #1a1a1a;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.carousel__btn_type_right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #1a1a1a;
+  border-right: 3px solid #1a1a1a;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.carousel__btn_type_flip::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #1a1a1a;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.carousel__btn_type_flip::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid #1a1a1a;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
 }
